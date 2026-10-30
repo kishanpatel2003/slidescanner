@@ -1,7 +1,7 @@
 {
   "presentation": {
     "presentationId": "mock-democo-deck",
-    "title": "DemoCo — Q2 2026 Business Review",
+    "title": "Acme — Q2 2026 Business Review",
     "pageSize": {
       "width": 9144000,
       "height": 5143500
@@ -22,7 +22,7 @@
               "height": 1200150
             },
             "isTextual": true,
-            "extractedContent": "# DemoCo — Q2 2026 Business Review",
+            "extractedContent": "# Acme — Q2 2026 Business Review",
             "extractionSource": "api-text",
             "description": null
           },
@@ -37,7 +37,7 @@
               "height": 377190
             },
             "isTextual": true,
-            "extractedContent": "Product demonstration · Synthetic data · July 2026",
+            "extractedContent": "July 2026",
             "extractionSource": "api-text",
             "description": null
           },
@@ -118,7 +118,7 @@
               "height": 297180
             },
             "isTextual": true,
-            "extractedContent": "Fictional company · Synthetic data",
+            "extractedContent": "Example data",
             "extractionSource": "api-text",
             "description": null
           }
@@ -169,7 +169,7 @@
               "height": 297180
             },
             "isTextual": true,
-            "extractedContent": "Fictional company · Synthetic data",
+            "extractedContent": "Example data",
             "extractionSource": "api-text",
             "description": null
           }
@@ -220,7 +220,7 @@
               "height": 297180
             },
             "isTextual": true,
-            "extractedContent": "Fictional company · Synthetic data",
+            "extractedContent": "Example data",
             "extractionSource": "api-text",
             "description": null
           }

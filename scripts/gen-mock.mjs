@@ -1,6 +1,6 @@
 // Generates the mock deck: lib/mockDeck.json + public/mock/slide-N.png
 // One source of truth for element geometry (px at 1600x900) and slide artwork.
-// Demo v2 (issue #4): Fictional DemoCo business review — synthetic demonstration data.
+// Acme business review used by the local example deck.
 import { chromium } from 'playwright';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -22,9 +22,9 @@ const baseCss = `
   .wordmark b { color:${BLUE_LT}; }
 `;
 const wordmark = (size, x, y) =>
-  `<div class="abs wordmark" style="left:${x}px;top:${y}px;font-size:${size}px;">democo<b>.</b></div>`;
+  `<div class="abs wordmark" style="left:${x}px;top:${y}px;font-size:${size}px;">acme<b>.</b></div>`;
 const disclaimer = () =>
-  `<div class="abs" style="left:100px;top:836px;width:460px;height:40px;font-size:21px;color:#4b5266;">Fictional company · Synthetic data</div>`;
+  `<div class="abs" style="left:100px;top:836px;width:460px;height:40px;font-size:21px;color:#4b5266;">Example data</div>`;
 const accentRule = (x, y) =>
   `<div class="abs" style="left:${x}px;top:${y}px;width:120px;height:5px;background:linear-gradient(90deg,${BLUE},${BLUE_LT});border-radius:3px;box-shadow:0 0 14px ${BLUE}66;"></div>`;
 
@@ -36,13 +36,13 @@ const s1 = {
     <div class="abs" style="left:1210px;top:330px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 45% 42%, #dbeafe 0%, ${BLUE_LT} 42%, ${BLUE} 100%);box-shadow:0 0 90px ${BLUE}aa;"></div>
     ${wordmark(46, 120, 118)}
     <div class="abs" style="left:118px;top:330px;width:1000px;height:180px;color:${INK};font-size:84px;font-weight:800;letter-spacing:-2.5px;line-height:1.06;">Q2 2026<br>Business Review</div>
-    <div class="abs" style="left:122px;top:560px;width:760px;height:56px;color:${MUTE};font-size:31px;font-weight:500;">Product demonstration · Synthetic data · July 2026</div>
+    <div class="abs" style="left:122px;top:560px;width:760px;height:56px;color:${MUTE};font-size:31px;font-weight:500;">July 2026</div>
     ${accentRule(122, 650)}`,
   elements: [
     { id: 'm_s1_title', type: 'text', role: 'title', px: { x: 108, y: 314, w: 1020, h: 210 }, isTextual: true,
-      content: '# DemoCo — Q2 2026 Business Review' },
+      content: '# Acme — Q2 2026 Business Review' },
     { id: 'm_s1_sub', type: 'text', role: 'subtitle', px: { x: 112, y: 550, w: 780, h: 66 }, isTextual: true,
-      content: 'Product demonstration · Synthetic data · July 2026' },
+      content: 'July 2026' },
     { id: 'm_s1_orb', type: 'image', role: null, px: { x: 1150, y: 270, w: 340, h: 340 }, isTextual: false,
       content: null, description: 'Decorative glow orb' },
   ],
@@ -80,7 +80,7 @@ const s2 = {
       content: null, description: 'KPI stat card',
       extraction: '**Q2 KPI card:** Net new ARR −$2.4M; logo retention 71%.' },
     { id: 'm_s2_disc', type: 'text', role: null, px: { x: 94, y: 828, w: 470, h: 52 }, isTextual: true,
-      content: 'Fictional company · Synthetic data' },
+      content: 'Example data' },
   ],
 };
 
@@ -126,7 +126,7 @@ const s3 = {
       content: null, description: 'ARR by month line chart',
       extraction: '**ARR by month ($M)**\n\n| Month | ARR | MoM |\n| --- | --- | --- |\n| Jan | 8.4 | — |\n| Feb | 7.9 | −6% |\n| Mar | 7.1 | −10% |\n| Apr | 6.2 | −13% |\n| May | 5.4 | −13% |\n| Jun | 4.7 | −13% |\n\nARR is down **40% from the January peak**, and the decline accelerated to ~13%/mo through Q2.' },
     { id: 'm_s3_disc', type: 'text', role: null, px: { x: 94, y: 828, w: 470, h: 52 }, isTextual: true,
-      content: 'Fictional company · Synthetic data' },
+      content: 'Example data' },
   ],
 };
 
@@ -166,7 +166,7 @@ const s4 = {
       content: null, description: 'Recovery plan flow diagram',
       extraction: '**Recovery plan:** Enterprise pivot (land 25 logos ≥ $50k) → usage-based pricing (decouple seats from value) → win-back program (target 120 churned logos), converging on **ARR +$2M by Q4** and a return to growth.' },
     { id: 'm_s4_disc', type: 'text', role: null, px: { x: 94, y: 828, w: 470, h: 52 }, isTextual: true,
-      content: 'Fictional company · Synthetic data' },
+      content: 'Example data' },
   ],
 };
 
@@ -175,7 +175,7 @@ const slidesDef = [s1, s2, s3, s4];
 
 const presentation = {
   presentationId: 'mock-democo-deck',
-  title: 'DemoCo — Q2 2026 Business Review',
+  title: 'Acme — Q2 2026 Business Review',
   pageSize: { width: PX_W * EMU, height: PX_H * EMU },
   slides: slidesDef.map((s, i) => ({
     slideId: s.slideId,

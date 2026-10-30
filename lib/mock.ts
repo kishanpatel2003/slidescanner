@@ -1,5 +1,5 @@
-// Demo/mock mode: serves a canned deck with zero external dependencies.
-// Enabled with MOCK_DECK=1. Used for recording product demos.
+// Example mode serves the bundled deck without external calls.
+// Enabled with MOCK_DECK=1.
 import 'server-only';
 
 import type { PresentationData, ThumbnailData, BoundingBox } from './types';

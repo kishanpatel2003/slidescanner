@@ -12,14 +12,14 @@ Machines alone do a bad job of reading slides full of diagrams, charts, and scre
 - **Everything is editable.** Every extracted block is a rich markdown editor. Fix a word, restructure a list, delete a paragraph - like writing in Notion.
 - **One master document.** Everything you keep flows into a single markdown doc, organized slide by slide, updated live. Copy it or download it as a `.md` file.
 
-## Try the demo without API keys
+## Quick start
 
 ```sh
 pnpm install --frozen-lockfile
 MOCK_DECK=1 pnpm dev
 ```
 
-Open http://localhost:3000 and enter any Google Slides URL. The bundled DemoCo deck and extraction responses are fictional. See [demo recording instructions](docs/DEMO.md).
+Open http://localhost:3000 and enter a Google Slides URL. `MOCK_DECK=1` uses the bundled Acme deck and saved extraction responses. See [recording instructions](docs/RECORDING.md).
 
 ## Getting started with your own decks
 
@@ -81,14 +81,12 @@ Set in `.env`:
 | --- | --- | --- |
 | `ANTHROPIC_API_KEY` | Anthropic API key for vision extraction | (required) |
 | `VISION_MODEL` | Which model reads your visuals | `claude-sonnet-4-6` |
-| `MOCK_DECK` | Set to `1` to serve the bundled demo deck instead of calling Google Slides or Anthropic | unset |
+| `MOCK_DECK` | Set to `1` to use the bundled deck and saved responses | unset |
 | `MOCK_EXTRACT_DELAY_MS` | Artificial delay for mock visual extraction, in milliseconds | `700` |
 
-## Demo mode
+## Example data
 
-Set `MOCK_DECK=1` to run SlideScanner against the bundled mock deck and canned extraction responses. This is intended for product demos and recordings; leave it unset for normal behavior with Google Slides and Anthropic.
-
-`MOCK_EXTRACT_DELAY_MS` controls the simulated extraction latency in demo mode. Set it to `0` for instant mock extraction.
+Leave `MOCK_DECK` unset to use Google Slides and Anthropic. `MOCK_EXTRACT_DELAY_MS=0` makes saved responses appear instantly.
 
 ## Good to know
 
@@ -100,11 +98,11 @@ Set `MOCK_DECK=1` to run SlideScanner against the bundled mock deck and canned e
 
 The backend (Next.js API routes) pulls the deck structure from the Google Slides API - element positions, types, and text - and renders slide thumbnails. The frontend overlays clickable bounding boxes on each slide. When you wand an element, the server crops that region out of the slide image with `sharp` and sends it to Claude via the Anthropic API with a prompt tuned to the element type (table, chart, diagram, screenshot). The result lands in the side pane as editable markdown, and the master document is recomputed from all kept blocks on every change.
 
-## Local prototype scope
+## Local use
 
-Run this as a local, single-user tool. It has no public-service authentication layer. Google access uses the credentials of the machine running it, and visual extraction sends selected content to the configured model endpoint. Keep it bound to localhost.
+Run on localhost. Google access uses your machine credentials; visual extraction sends the selected content to the configured model provider.
 
-The editor currently uses Tiptap v2 with tiptap-markdown 0.9; the latter declares a v3 peer dependency. Dependency audit also reports a Tiptap mergeAttributes advisory whose published patched range is v3.30.4 or later. A coordinated editor migration remains future work. Do not deploy this prototype as a public service handling untrusted content.
+The editor uses Tiptap v2 with a known `mergeAttributes` advisory. Upgrade the editor before exposing it as a service that accepts untrusted content.
 
 ## License
 
