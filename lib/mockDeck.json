@@ -1,0 +1,236 @@
+{
+  "presentation": {
+    "presentationId": "mock-democo-deck",
+    "title": "DemoCo — Q2 2026 Business Review",
+    "pageSize": {
+      "width": 9144000,
+      "height": 5143500
+    },
+    "slides": [
+      {
+        "slideId": "g_mock_slide1",
+        "index": 0,
+        "elements": [
+          {
+            "elementId": "m_s1_title",
+            "type": "text",
+            "role": "title",
+            "boundingBox": {
+              "x": 617220,
+              "y": 1794510,
+              "width": 5829300,
+              "height": 1200150
+            },
+            "isTextual": true,
+            "extractedContent": "# DemoCo — Q2 2026 Business Review",
+            "extractionSource": "api-text",
+            "description": null
+          },
+          {
+            "elementId": "m_s1_sub",
+            "type": "text",
+            "role": "subtitle",
+            "boundingBox": {
+              "x": 640080,
+              "y": 3143250,
+              "width": 4457700,
+              "height": 377190
+            },
+            "isTextual": true,
+            "extractedContent": "Product demonstration · Synthetic data · July 2026",
+            "extractionSource": "api-text",
+            "description": null
+          },
+          {
+            "elementId": "m_s1_orb",
+            "type": "image",
+            "role": null,
+            "boundingBox": {
+              "x": 6572250,
+              "y": 1543050,
+              "width": 1943100,
+              "height": 1943100
+            },
+            "isTextual": false,
+            "extractedContent": null,
+            "extractionSource": null,
+            "description": "Decorative glow orb"
+          }
+        ]
+      },
+      {
+        "slideId": "g_mock_slide2",
+        "index": 1,
+        "elements": [
+          {
+            "elementId": "m_s2_title",
+            "type": "text",
+            "role": "title",
+            "boundingBox": {
+              "x": 525780,
+              "y": 320040,
+              "width": 5257800,
+              "height": 548640
+            },
+            "isTextual": true,
+            "extractedContent": "## State of the Business",
+            "extractionSource": "api-text",
+            "description": null
+          },
+          {
+            "elementId": "m_s2_body",
+            "type": "text",
+            "role": "body",
+            "boundingBox": {
+              "x": 560070,
+              "y": 1177290,
+              "width": 4572000,
+              "height": 2548890
+            },
+            "isTextual": true,
+            "extractedContent": "- ARR peaked at **$8.4M** in January\n- Enterprise churn stabilized at **14%/mo**\n- CAC payback stretched to **19 months**\n- **34 FTEs** across GTM and engineering",
+            "extractionSource": "api-text",
+            "description": null
+          },
+          {
+            "elementId": "m_s2_card",
+            "type": "image",
+            "role": null,
+            "boundingBox": {
+              "x": 5486400,
+              "y": 1200150,
+              "width": 3086100,
+              "height": 2457450
+            },
+            "isTextual": false,
+            "extractedContent": null,
+            "extractionSource": null,
+            "description": "KPI stat card"
+          },
+          {
+            "elementId": "m_s2_disc",
+            "type": "text",
+            "role": null,
+            "boundingBox": {
+              "x": 537210,
+              "y": 4732020,
+              "width": 2686050,
+              "height": 297180
+            },
+            "isTextual": true,
+            "extractedContent": "Fictional company · Synthetic data",
+            "extractionSource": "api-text",
+            "description": null
+          }
+        ]
+      },
+      {
+        "slideId": "g_mock_slide3",
+        "index": 2,
+        "elements": [
+          {
+            "elementId": "m_s3_title",
+            "type": "text",
+            "role": "title",
+            "boundingBox": {
+              "x": 525780,
+              "y": 285750,
+              "width": 5829300,
+              "height": 548640
+            },
+            "isTextual": true,
+            "extractedContent": "## ARR Trajectory",
+            "extractionSource": "api-text",
+            "description": null
+          },
+          {
+            "elementId": "m_s3_chart",
+            "type": "chart",
+            "role": null,
+            "boundingBox": {
+              "x": 800100,
+              "y": 1097280,
+              "width": 7543800,
+              "height": 3543300
+            },
+            "isTextual": false,
+            "extractedContent": null,
+            "extractionSource": null,
+            "description": "ARR by month line chart"
+          },
+          {
+            "elementId": "m_s3_disc",
+            "type": "text",
+            "role": null,
+            "boundingBox": {
+              "x": 537210,
+              "y": 4732020,
+              "width": 2686050,
+              "height": 297180
+            },
+            "isTextual": true,
+            "extractedContent": "Fictional company · Synthetic data",
+            "extractionSource": "api-text",
+            "description": null
+          }
+        ]
+      },
+      {
+        "slideId": "g_mock_slide4",
+        "index": 3,
+        "elements": [
+          {
+            "elementId": "m_s4_title",
+            "type": "text",
+            "role": "title",
+            "boundingBox": {
+              "x": 525780,
+              "y": 285750,
+              "width": 5829300,
+              "height": 548640
+            },
+            "isTextual": true,
+            "extractedContent": "## Recovery Plan",
+            "extractionSource": "api-text",
+            "description": null
+          },
+          {
+            "elementId": "m_s4_diag",
+            "type": "image",
+            "role": null,
+            "boundingBox": {
+              "x": 800100,
+              "y": 1097280,
+              "width": 7543800,
+              "height": 3543300
+            },
+            "isTextual": false,
+            "extractedContent": null,
+            "extractionSource": null,
+            "description": "Recovery plan flow diagram"
+          },
+          {
+            "elementId": "m_s4_disc",
+            "type": "text",
+            "role": null,
+            "boundingBox": {
+              "x": 537210,
+              "y": 4732020,
+              "width": 2686050,
+              "height": 297180
+            },
+            "isTextual": true,
+            "extractedContent": "Fictional company · Synthetic data",
+            "extractionSource": "api-text",
+            "description": null
+          }
+        ]
+      }
+    ]
+  },
+  "extractions": {
+    "m_s2_card": "**Q2 KPI card:** Net new ARR −$2.4M; logo retention 71%.",
+    "m_s3_chart": "**ARR by month ($M)**\n\n| Month | ARR | MoM |\n| --- | --- | --- |\n| Jan | 8.4 | — |\n| Feb | 7.9 | −6% |\n| Mar | 7.1 | −10% |\n| Apr | 6.2 | −13% |\n| May | 5.4 | −13% |\n| Jun | 4.7 | −13% |\n\nARR is down **40% from the January peak**, and the decline accelerated to ~13%/mo through Q2.",
+    "m_s4_diag": "**Recovery plan:** Enterprise pivot (land 25 logos ≥ $50k) → usage-based pricing (decouple seats from value) → win-back program (target 120 churned logos), converging on **ARR +$2M by Q4** and a return to growth."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "slidescanner",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "demo:assets": "node scripts/gen-mock.mjs",
+    "demo:record": "node scripts/record-demo.mjs",
+    "demo:encode": "bash scripts/encode-demo.sh",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 -p ${PORT:-3000}"
+  },
+  "dependencies": {
+    "@tiptap/extension-table": "^2.27.3",
+    "@tiptap/extension-table-cell": "^2.27.3",
+    "@tiptap/extension-table-header": "^2.27.3",
+    "@tiptap/extension-table-row": "^2.27.3",
+    "@tiptap/pm": "^2.27.3",
+    "@tiptap/react": "^2.27.3",
+    "@tiptap/starter-kit": "^2.27.3",
+    "google-auth-library": "^10.9.1",
+    "googleapis": "^173.0.0",
+    "next": "15.5.28",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sharp": "^0.35.5",
+    "tiptap-markdown": "^0.9.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.2.1",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/node": "~24.0.15",
+    "@types/react": "^19.3.0",
+    "playwright": "^1.64.1",
+    "postcss": "^8.5.32",
+    "tailwindcss": "4.2.1",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/node": "~24.0.0",
+      "markdown-it": "^14.3.3",
+      "postcss": "^8.5.23",
+      "nanoid": "^3.3.18",
+      "qs": "^6.16.1",
+      "brace-expansion": "^2.1.7",
+      "source-map-js": "^1.2.2",
+      "postcss-selector-parser": "^6.1.5"
+    }
+  }
+}
